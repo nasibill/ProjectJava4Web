@@ -1,0 +1,85 @@
+The user must be able to search for a video.
+The user must be able to see who posted the video.
+The user must be able to know when the video was posted.
+The user must be able to count how many views it has.
+The user must be able to see how long is the video.
+The user must be able to subscribe to the person posting the video.
+The user must be able to like/dislike the video.
+The user must be able to comment the video.
+The user must be able to sharing the video.
+The user must be able to report the video.
+The user must be able to choose the quality of the video.
+The user must be able to choose the speed of the video.
+The user must be able to choose the size of the video screen.
+The user must be able to choose the volume of the video.
+The user must be able to choose when to stop and when to start the video.
+The user must be able to comment on other comments.
+The user must be able to click likes / dislikes in other comments.
+The user must be able to see how many subscribers he has commented on.
+The user must be able to see when the comment is made.
+The user must be able to make a list of their favorite videos.
+The user must be able to classification comments by date / most popular.
+The user must be able to see how many comments have been made on the video.
+The user must be able to watch suggested videos.
+The user must be able to see a description of the person who posted the video.
+The user must be able to see who has subscribed.
+The user must be able to view the most popular videos.
+The user must be able to see the history from the videos he has seen.
+The user must be able to upload a video.
+The user must be able to select subtitles.
+Add
+Pre-state: Connected to main page
+Step 1: Log is as admin
+Step 2: Select products
+Step 3: Select add new product 
+Step 4: Add product details 
+Step 5: Submit product from
+Step 6: Confirmation pop up shown 
+Post-state: Product added view Product page
+Scenario: Add product to site
+Given i am logged in as an administrator 
+And i selected the products page 
+When i add a new product:
+|name| 'iphone 11 '|
+|price| '$1200'|
+|category|'smartphone'|
+And i submit the product from
+Then the system should confirm
+And i should see the products page
+Edit
+pre-status: linked to the main page
+Step 1: The log is as admin
+Step 2: Product Selection
+Step 3: Select Edit New Product
+step 4: edit product details
+step 5: submit product from
+Step 6: The confirmation popup appears
+Post-status: product edit view product page view
+Scenario: Edit the product on the site
+Since I'm logged on as an administrator
+and I chose the product page
+when processing a new product:
+from | name 'iphone 11 pro '| to |'iphone 11 pro max' |
+from |price |'$ 1200' | to |'$1300'|
+| category |'smartphone'|
+and I submit the product from
+then the system must confirm
+and I should see the product page
+Delete
+pre-status: linked to the main page
+Step 1: The log is as admin
+Step 2: Product Selection
+Step 3: Select delete Product
+step 4: delete product details
+step 5: submit 
+Step 6: The confirmation popup appears
+Post-status: product delete view product page view
+Scenario: delete the product on the site
+Since I'm logged on as an administrator
+and I chose the product page
+when processing a new product:
+| name| 'Xiaomi Mi Bedside Lamp Gold '| 
+|price |'$ 60' | 
+| category |'|home'|
+and I submit the product from
+then the system must confirm
